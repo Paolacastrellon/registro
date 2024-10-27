@@ -1,0 +1,119 @@
+
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Laboratorio Químico</title>
+</head>
+<body>
+    <h1>Inventario de Productos del Laboratorio Químico</h1>
+
+    <!-- Formulario para ingresar productos -->
+    <fieldset>
+        <legend>Registrar un nuevo producto</legend>
+
+        <form action="#" method="post">
+            <!-- Nombre del producto -->
+            <label for="nombreProducto">Nombre del producto:</label><br>
+            <input type="text" id="nombreProducto" name="nombreProducto" required><br><br>
+
+            <!-- Cantidad del producto -->
+            <label for="cantidadProducto">Cantidad:</label><br>
+            <input type="number" id="cantidadProducto" name="cantidadProducto" required><br><br>
+
+            <!-- Precio del producto -->
+            <label for="precioProducto">Precio por unidad (USD):</label><br>
+            <input type="number" id="precioProducto" name="precioProducto" step="0.01" required><br><br>
+
+            <!-- Tipo de producto -->
+            <label for="tipoProducto">Tipo de producto:</label><br>
+            <select id="tipoProducto" name="tipoProducto" required>
+                <option value="solido">Sólido</option>
+                <option value="liquido">Líquido</option>
+                <option value="gaseoso">Gaseoso</option>
+            </select><br><br>
+
+            <!-- Botón para enviar el formulario -->
+            <input type="submit" value="Agregar Producto">
+        </form>
+    </fieldset>
+
+    <br>
+
+    <!-- Tabla para mostrar los productos registrados -->
+    <fieldset>
+        <legend>Lista de productos registrados</legend>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre del producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio (USD)</th>
+                    <th>Tipo de producto</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fila de ejemplo para mostrar cómo se vería la tabla -->
+                <tr>
+                    <td>Ácido sulfúrico</td>
+                    <td>20</td>
+                    <td>12.50</td>
+                    <td>Líquido</td>
+                    <td>
+                        <form action="#" method="post">
+                            <input type="submit" value="Editar">
+                            <input type="submit" value="Eliminar">
+                        </form>
+                    </td>
+                </tr>
+                <!-- Aquí se pueden agregar más productos en el futuro -->
+            </tbody>
+        </table>
+    </fieldset>
+
+    <br>
+
+    <!-- Formulario para editar productos existentes -->
+    <fieldset>
+        <legend>Editar producto existente</legend>
+
+        <form action="#" method="post">
+            <!-- Selección del producto a editar -->
+            <label for="productoEditar">Seleccionar producto:</label><br>
+            <select id="productoEditar" name="productoEditar" required>
+                <option value="acido_sulfurico">Ácido sulfúrico</option>
+                <option value="cloruro_de_sodio">Cloruro de sodio</option>
+                <!-- Aquí se pueden añadir más productos -->
+            </select><br><br>
+
+            <!-- Nuevo nombre del producto -->
+            <label for="nuevoNombreProducto">Nuevo nombre del producto:</label><br>
+            <input type="text" id="nuevoNombreProducto" name="nuevoNombreProducto" required><br><br>
+
+            <!-- Nueva cantidad del producto -->
+            <label for="nuevaCantidadProducto">Nueva cantidad:</label><br>
+            <input type="number" id="nuevaCantidadProducto" name="nuevaCantidadProducto" required><br><br>
+
+            <!-- Nuevo precio del producto -->
+            <label for="nuevoPrecioProducto">Nuevo precio por unidad (USD):</label><br>
+            <input type="number" id="nuevoPrecioProducto" name="nuevoPrecioProducto" step="0.01" required><br><br>
+
+            <!-- Nuevo tipo de producto -->
+            <label for="nuevoTipoProducto">Nuevo tipo de producto:</label><br>
+            <select id="nuevoTipoProducto" name="nuevoTipoProducto" required>
+                <option value="solido">Sólido</option>
+                <option value="liquido">Líquido</option>
+                <option value="gaseoso">Gaseoso</option>
+            </select><br><br>
+
+            <!-- Botón para actualizar los datos del producto -->
+            <input type="submit" value="Actualizar Producto">
+        </form>
+    </fieldset>
+
+</body>
+</html>
